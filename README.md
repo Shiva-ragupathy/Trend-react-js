@@ -141,7 +141,7 @@ No `package.json` or source code is included.
 ## 📄 Documentation
 
 Detailed documentation is available here:  
-👉 [View Project PDF](./docs/Trends-project2.pdf)
+👉 [View Project PDF](./docs/Trends -project2.pdf)
 
 ---
 ## 👨‍💻 Author
