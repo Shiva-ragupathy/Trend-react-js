@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        IMAGE = "shiva-ragupathy/trend-app"
+        IMAGE = "shivark1996/trend-app" 
     }
 
     stages {
