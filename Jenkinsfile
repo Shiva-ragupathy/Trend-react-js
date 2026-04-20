@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        IMAGE = "YOUR_DOCKERHUB_USERNAME/trend-app"
+        IMAGE = "shiva-ragupathy/trend-app"
     }
 
     stages {
@@ -21,7 +21,7 @@ pipeline {
 
         stage('Push Docker Image') {
             steps {
-                withCredentials([usernamePassword(credentialsId: 'docker-creds', usernameVariable: 'USER', passwordVariable: 'PASS')]) {
+                withCredentials([usernamePassword(credentialsId: 'dockerhub-credentials', usernameVariable: 'USER', passwordVariable: 'PASS')]) {
                     sh 'echo $PASS | docker login -u $USER --password-stdin'
                     sh 'docker push $IMAGE:latest'
                 }
