@@ -1,91 +1,135 @@
-DevOps Practice Project – Dist Directory
+## 🚀 DevOps Practice Project – Dist Directory
+This repository contains the production-ready build (dist folder) for deployment and DevOps practice.
+Application credit: Vennilavanguvi
 
-This repository contains the production-ready build files (dist folder) for DevOps practice and deployment exercises.
+## 📁 Contents
+- dist/ – HTML, CSS, JS, and assets
+- Ready for deployment on:
+- Nginx / Apache
+- AWS S3 / Cloud
+- Docker / Kubernetes
+- CI/CD pipelines
 
-It is intentionally structured to help learners focus on CI/CD pipelines, hosting, containerization, and infrastructure setup rather than application development.
 
-📁 What This Repository Contains
+## 🎯 Purpose
+Used for DevOps practice: CI/CD, Docker, Kubernetes, and deployment workflows.
 
-dist/ – Compiled and production-ready static files
+## ❓ Note
+No package.json or source code because this is already a built application (production output).
 
-HTML
+## 👨‍💻 Credits
+Developer: Vennilavanguvi
+DevOps: Your Name
 
-CSS
+# 🚀 DevOps Practice Project – Trend Application Deployment
 
-JavaScript
+This repository demonstrates a complete **end-to-end DevOps workflow** for deploying the Trend application.  
+**Application credit: Vennilavanguvi**
 
-Assets (images, fonts, etc.)
+---
 
-These files are ready to deploy to:
+## 📁 Repository Contents
 
-Web servers (Nginx / Apache)
+### 🔹 Application
+- Node.js application (runs on port 3000)
+- `dist/` – Production build (HTML, CSS, JS, assets)
 
-Cloud platforms (AWS S3, Azure Blob, GCP Storage)
+### 🔹 DevOps Files
+- `Dockerfile` – Containerization  
+- `Jenkinsfile` – CI/CD pipeline  
+- `main.tf` – Terraform infrastructure  
+- `deployment.yaml` – Kubernetes deployment  
+- `service.yaml` – Kubernetes service  
+- `.gitignore`, `.dockerignore`
 
-Containerized environments (Docker + Nginx)
+---
 
-Kubernetes clusters
+## 🎯 Purpose
 
-CI/CD pipeline demonstrations
+This project is created for **DevOps practice**, covering:
 
-🎯 Purpose of This Repository
+- CI/CD pipeline implementation  
+- Docker image creation & push  
+- Kubernetes (AWS EKS) deployment  
+- Terraform infrastructure provisioning  
+- Jenkins automation  
+- GitHub integration with webhooks  
 
-This repository is designed for:
+---
 
-DevOps beginners
+## ⚙️ Application Details
 
-CI/CD practice
+- Runs on **port 3000**
+- Built using **Node.js**
+- Containerized with **Docker**
+- Deployed on **Kubernetes (EKS)**
 
-Deployment pipeline testing
+---
 
-Docker & Kubernetes deployment exercises
+## 🐳 Docker
 
-Web server configuration practice
+- Docker image built using `Dockerfile`
+- Image pushed to DockerHub repository
 
-Reverse proxy and load balancer setup
+---
 
-The goal is to simulate real-world deployment scenarios using already built application files.
+## ☁️ Terraform Infrastructure
 
-❓ Why is there NO package.json?
+Provisioned using `main.tf`:
 
-You may notice that this repository does not include:
+- VPC  
+- Subnets  
+- IAM roles  
+- EC2 instance (Jenkins server)  
+- EKS cluster  
 
-package.json
+---
 
-node_modules
+## ☸️ Kubernetes Deployment
 
-Source code (src/)
+- Application deployed using:
+  - `deployment.yaml`
+  - `service.yaml`
+- Running inside AWS EKS cluster  
 
-Build tools configuration
+---
 
-✅ Reason:
+## 🔄 CI/CD Pipeline (Jenkins)
 
-This repository only contains the final production build output (dist), not the development source code.
+Pipeline stages:
 
-In a typical project:
+1. Code checkout from GitHub  
+2. Docker image build  
+3. Push image to DockerHub  
+4. Deploy to Kubernetes  
 
-Developers write source code.
+---
 
-The project is built using tools like:
+## 🔗 GitHub Integration
 
-Node.js
+- Webhook configured  
+- Automatically triggers Jenkins build on every commit  
 
-Webpack
+---
 
-Vite
+## ❓ Note
 
-React (or other frameworks)
+The `dist/` folder contains **production-ready build files only**.  
+No `package.json` or source code is included.
 
-A dist/ folder is generated.
+---
 
-Only the production build is deployed to servers.
+## ✅ Outcome
 
-This repository represents step 4 only.
+- Application deployed on port 3000  
+- Docker image successfully built and pushed  
+- Infrastructure provisioned using Terraform  
+- EKS cluster running  
+- Application deployed on Kubernetes  
+- CI/CD fully automated  
 
-Since this is already the compiled output:
+---
 
-No dependencies are required
+## 👨‍💻 Author
 
-No build process is required
-
-No package.json is needed
+**Shiva Rama Krishnan**
