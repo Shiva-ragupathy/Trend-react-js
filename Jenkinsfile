@@ -6,11 +6,11 @@ pipeline {
     }
 
     stages {
-
         stage('Checkout') {
             steps {
-                // Specify the 'main' branch explicitly
-                git branch: 'main', url: 'https://github.com/Shiva-ragupathy/Trend-react-js.git'
+                git branch: 'main', 
+                    url: 'https://github.com/Shiva-ragupathy/Trend-react-js.git',
+                    credentialsId: 'github-credentials'
             }
         }
 
@@ -22,18 +22,24 @@ pipeline {
 
         stage('Push Docker Image') {
             steps {
-                withCredentials([usernamePassword(credentialsId: 'dockerhub-credentials', usernameVariable: 'USER', passwordVariable: 'PASS')]) {
-                    sh 'echo $PASS | docker login -u $USER --password-stdin'
-                    sh 'docker push $IMAGE:latest'
+                withCredentials([usernamePassword(credentialsId: 'dockerhub-cred', 
+                                                  usernameVariable: 'USER', 
+                                                  passwordVariable: 'PASS')]) {
+                    sh '''
+                        echo $PASS | docker login -u $USER --password-stdin
+                        docker push $IMAGE:latest
+                    '''
                 }
             }
         }
 
         stage('Deploy to EKS') {
             steps {
-                sh 'aws eks update-kubeconfig --name devops-cluster --region ap-south-1'
-                sh 'kubectl apply -f k8s/deployment.yaml'
-                sh 'kubectl apply -f k8s/service.yaml'
+                sh '''
+                    aws eks update-kubeconfig --name devops-cluster --region ap-south-1
+                    kubectl apply -f k8s/deployment.yaml
+                    kubectl apply -f k8s/service.yaml
+                '''
             }
         }
     }
