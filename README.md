@@ -93,6 +93,8 @@ Provisioned using `main.tf`:
 - Running inside AWS EKS cluster  
 
 ---
+### 🔹 Kubernetes Cluster
+![Cluster](./cluster.png)
 
 ## 🔄 CI/CD Pipeline (Jenkins)
 
@@ -119,6 +121,10 @@ No `package.json` or source code is included.
 
 ---
 
+## Monitoring
+### 🔹 Uptime / Monitoring
+![Uptime](./uptime.png)
+
 ## ✅ Outcome
 
 - Application deployed on port 3000  
@@ -129,7 +135,15 @@ No `package.json` or source code is included.
 - CI/CD fully automated  
 
 ---
+### 🔹 Application (Trendify UI)
+![Trendify](./Trendify.png)
 
+## 📄 Documentation
+
+Detailed documentation is available here:  
+👉 [View Project PDF](./docs/Trends-project2.pdf)
+
+---
 ## 👨‍💻 Author
 
 **Shiva Rama Krishnan**
