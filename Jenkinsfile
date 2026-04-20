@@ -9,7 +9,8 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git 'https://github.com/Shiva-ragupathy/Trend-react-js.git'
+                // Specify the 'main' branch explicitly
+                git branch: 'main', url: 'https://github.com/Shiva-ragupathy/Trend-react-js.git'
             }
         }
 
