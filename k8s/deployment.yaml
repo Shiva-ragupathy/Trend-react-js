@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: devops-app
-        image: YOUR_DOCKER_IMAGE
+        image: shivark1996/trend-app:latest
         ports:
         - containerPort: 3000
